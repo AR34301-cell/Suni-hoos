@@ -1,5 +1,5 @@
 telethon
-python-curl_cffi
+httpx
 aiohttp
 aiofiles
 requests
