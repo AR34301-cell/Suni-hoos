@@ -4,3 +4,4 @@ aiohttp
 aiofiles
 requests
 urllib3
+curl_cffi
