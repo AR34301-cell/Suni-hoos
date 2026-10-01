@@ -8436,6 +8436,18 @@ async def cb_fb_reject(event):
     await event.answer("❌ Rejected")
 
 
+# ═══════════════════════════════════════════════════════════════
+#  Vercel ASGI shim — exports `app` so the build succeeds
+#  ═══════════════════════════════════════════════════════════════
+from fastapi import FastAPI
+
+app = FastAPI()
+
+@app.get("/")
+def _vercel_health():
+    return {"status": "alive", "bot": "not-running"}
+
+
 print(f"[VENOM] Bot starting — Admin: {OWNER_ID}")
 _register_commands()
 print("[VENOM] Commands registered")
