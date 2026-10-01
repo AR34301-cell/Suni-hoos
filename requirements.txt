@@ -1,7 +1,8 @@
 telethon
-httpx
+curl_cffi
 aiohttp
 aiofiles
 requests
 urllib3
-curl_cffi
+fastapi
+uvicorn
